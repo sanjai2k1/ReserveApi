@@ -41,10 +41,10 @@ namespace ReserveApi.Controllers
 
         [HttpPut]
 
-        public Reservation Put([FromBody] Reservation res)
+        public Reservation Put([FromBody] Reservation reservation)
         {
-
-            return repository.UpdateReservation(res);
+            Console.WriteLine(reservation.Name);
+            return repository.UpdateReservation(reservation);
 
         }
 
